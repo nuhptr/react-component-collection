@@ -4,6 +4,6 @@ Building a collection of React projects to learn and experiment with different f
 
 ## Projects
 
--  [name]("./src") - [description]
+-  [Accordion]("./src/components/accordion") - Create an accordion component.
 
 ## Dependencies
