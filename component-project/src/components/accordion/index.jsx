@@ -3,7 +3,15 @@
 
 import { useState } from "react"
 
-import "./styles.css"
+import {
+   Wrapper,
+   ButtonMultiSelect,
+   DivAccordion,
+   DivAccordionContent,
+   DivAccordionItem,
+   DivAccordionItemTitle,
+   HeadingTitleQuestion,
+} from "./index.styles"
 import { data } from "./data"
 
 export default function Accordion() {
@@ -22,51 +30,54 @@ export default function Accordion() {
       let copyMultipleSelected = [...multipleSelected]
       const findIndexCurrentId = copyMultipleSelected.indexOf(getCurrentId)
 
-      if (findIndexCurrentId === -1) {
-         copyMultipleSelected.push(getCurrentId)
-      } else {
-         copyMultipleSelected.splice(findIndexCurrentId, 1)
-      }
+      if (findIndexCurrentId === -1) copyMultipleSelected.push(getCurrentId)
+      else copyMultipleSelected.splice(findIndexCurrentId, 1)
 
       setMultipleSelected(copyMultipleSelected)
    }
 
    return (
-      <div className="wrapper">
-         <button className="btn-multiselect" onClick={() => setEnableMultiSelect((prev) => !prev)}>
+      <Wrapper>
+         <ButtonMultiSelect onClick={() => setEnableMultiSelect((prev) => !prev)}>
             {!enableMultiSelect ? "Enabled" : "Disabled"} multi select
-         </button>
+         </ButtonMultiSelect>
 
-         <div className="accordion">
+         <DivAccordion>
             {data.length > 0 &&
-               data.map((dataItem) => (
-                  <div className="accordion-item" key={dataItem.id}>
-                     <div
-                        onClick={
-                           enableMultiSelect
-                              ? () => handleMultipleSelect(dataItem.id)
-                              : () => handleSingleSelect(dataItem.id)
-                        }
-                        className="accordion-title">
-                        <h3 className="accordion-title__question">{dataItem.question}</h3>
-                        <span>
-                           {selected === dataItem.id || multipleSelected.indexOf(dataItem.id) !== -1
-                              ? "-"
-                              : "+"}
-                        </span>
-                     </div>
-                     {enableMultiSelect
+               data.map((dataItem) => {
+                  const handleSelect = enableMultiSelect
+                     ? () => handleMultipleSelect(dataItem.id)
+                     : () => handleSingleSelect(dataItem.id)
+
+                  const handleIconSelected =
+                     selected === dataItem.id || multipleSelected.indexOf(dataItem.id) !== -1
+                        ? "-"
+                        : "+"
+
+                  const handleContent = (dataItem) => {
+                     return enableMultiSelect
                         ? multipleSelected.indexOf(dataItem.id) !== -1 && (
-                             <div className="accordion-content">{dataItem.answer}</div>
+                             <DivAccordionContent>{dataItem.answer}</DivAccordionContent>
                           )
                         : selected === dataItem.id && (
-                             <div className="accordion-content">{dataItem.answer}</div>
-                          )}
-                  </div>
-               ))}
+                             <DivAccordionContent>{dataItem.answer}</DivAccordionContent>
+                          )
+                  }
+
+                  return (
+                     <DivAccordionItem key={dataItem.id}>
+                        <DivAccordionItemTitle onClick={handleSelect}>
+                           <HeadingTitleQuestion>{dataItem.question}</HeadingTitleQuestion>
+                           <span>{handleIconSelected}</span>
+                        </DivAccordionItemTitle>
+
+                        {handleContent(dataItem)}
+                     </DivAccordionItem>
+                  )
+               })}
 
             {!data && data.length === 0 && <div>No data found!</div>}
-         </div>
-      </div>
+         </DivAccordion>
+      </Wrapper>
    )
 }
