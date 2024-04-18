@@ -2,14 +2,14 @@ import { useCallback, useEffect, useState } from "react"
 
 import {
    ButtonStyled,
+   Container,
    ContainerButton,
    ContainerContent,
    HeadingStyled,
    ParagraphStyled,
-   SectionStyled,
 } from "./index.styles"
 
-export default function ColorGenerator() {
+export function ColorGenerator() {
    const [color, setColor] = useState("#000000")
    const [typeOfColor, setTypeOfColor] = useState("hex")
 
@@ -45,7 +45,7 @@ export default function ColorGenerator() {
    }, [handleCreateRandomHexColor, handleCreateRandomRgbColor, typeOfColor])
 
    return (
-      <SectionStyled color={color}>
+      <Container>
          <ContainerButton>
             <ButtonStyled onClick={() => setTypeOfColor("hex")}>Create Hex Color</ButtonStyled>
             <ButtonStyled onClick={() => setTypeOfColor("rgb")}>Create RGB Color</ButtonStyled>
@@ -54,8 +54,8 @@ export default function ColorGenerator() {
 
          <ContainerContent>
             <ParagraphStyled>{typeOfColor === "hex" ? "Hex Color" : "RGB Color"}</ParagraphStyled>
-            <HeadingStyled>{color}</HeadingStyled>
+            <HeadingStyled color={color}>{color}</HeadingStyled>
          </ContainerContent>
-      </SectionStyled>
+      </Container>
    )
 }

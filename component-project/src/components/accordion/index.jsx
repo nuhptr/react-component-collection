@@ -12,9 +12,10 @@ import {
    DivAccordionItemTitle,
    HeadingTitleQuestion,
 } from "./index.styles"
+
 import { data } from "./data"
 
-export default function Accordion() {
+export function Accordion() {
    const [selected, setSelected] = useState(null)
    const [multipleSelected, setMultipleSelected] = useState([])
 
