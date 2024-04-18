@@ -9,4 +9,4 @@ Building a collection of React projects to learn and experiment with different f
 ## Dependencies
 
 -  [styled-components] - CSS-in-JS library.
--  [react-icons] - Icon library for React.
+-  [lucide-react] - Icon library.
