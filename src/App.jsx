@@ -1,6 +1,4 @@
-import { Accordion } from "./components/accordion"
-import { ColorGenerator } from "./components/color-generator"
-import { StarRating } from "./components/star-rating"
+import { Accordion, ColorGenerator, ImageSlider, StarRating } from "./components"
 
 export default function App() {
    return (
@@ -11,6 +9,8 @@ export default function App() {
          <ColorGenerator />
          {/* Star Rating */}
          <StarRating numberStarts={5} />
+         {/* Slider */}
+         <ImageSlider />
       </main>
    )
 }

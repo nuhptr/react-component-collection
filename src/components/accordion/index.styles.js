@@ -28,11 +28,19 @@ export const ButtonMultiSelect = styled.button`
 export const DivAccordion = styled.div`
    width: 500px;
 `
-
 export const DivAccordionItem = styled.div`
    background-color: greenyellow;
    margin-bottom: 10px;
    padding: 2rem 2rem;
+
+   & .div-accordion-item__content {
+      color: black;
+      height: auto;
+      text-align: left;
+      line-height: 1.5;
+      margin-top: 8px;
+      letter-spacing: -0.1px;
+   }
 `
 
 export const DivAccordionItemTitle = styled.div`
@@ -41,19 +49,10 @@ export const DivAccordionItemTitle = styled.div`
    justify-content: space-between;
    align-items: center;
    cursor: pointer;
-`
 
-export const DivAccordionContent = styled.div`
-   color: black;
-   height: auto;
-   text-align: left;
-   line-height: 1.5;
-   margin-top: 8px;
-   letter-spacing: -0.1px;
-`
-
-export const HeadingTitleQuestion = styled.h3`
-   font-weight: 400;
-   font-size: 20px;
-   letter-spacing: -0.5px;
+   & .div-accordion-item-title__paragraph {
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: -0.5px;
+   }
 `

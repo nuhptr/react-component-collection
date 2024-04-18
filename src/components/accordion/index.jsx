@@ -7,10 +7,8 @@ import {
    Wrapper,
    ButtonMultiSelect,
    DivAccordion,
-   DivAccordionContent,
    DivAccordionItem,
    DivAccordionItemTitle,
-   HeadingTitleQuestion,
 } from "./index.styles"
 
 import { data } from "./data"
@@ -58,17 +56,19 @@ export function Accordion() {
                   const handleContent = (dataItem) => {
                      return enableMultiSelect
                         ? multipleSelected.indexOf(dataItem.id) !== -1 && (
-                             <DivAccordionContent>{dataItem.answer}</DivAccordionContent>
+                             <div className="div-accordion-item__content">{dataItem.answer}</div>
                           )
                         : selected === dataItem.id && (
-                             <DivAccordionContent>{dataItem.answer}</DivAccordionContent>
+                             <div className="div-accordion-item__content">{dataItem.answer}</div>
                           )
                   }
 
                   return (
                      <DivAccordionItem key={dataItem.id}>
                         <DivAccordionItemTitle onClick={handleSelect}>
-                           <HeadingTitleQuestion>{dataItem.question}</HeadingTitleQuestion>
+                           <h3 className="div-accordion-item-title__paragraph">
+                              {dataItem.question}
+                           </h3>
                            <span>{handleIconSelected}</span>
                         </DivAccordionItemTitle>
 
