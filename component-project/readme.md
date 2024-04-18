@@ -7,3 +7,6 @@ Building a collection of React projects to learn and experiment with different f
 -  [Accordion]("./src/components/accordion") - Create an accordion component.
 
 ## Dependencies
+
+-  [styled-components] - CSS-in-JS library.
+-  [react-icons] - Icon library for React.
