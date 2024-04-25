@@ -13,7 +13,7 @@ interface IModalCompProps {
 export function ModalComp(props: IModalCompProps) {
    return (
       <div
-         className="fixed z-10 pt-36 left-0 top-0 w-full h-full overflow-auto drop-shadow-md"
+         className="fixed top-0 left-0 z-10 w-full h-full overflow-auto pt-36 drop-shadow-md"
          id={props.id || "Modal"}>
          <div className="relative bg-[#fefefe] m-auto p-0  w-4/5 animate-modal">
             <div className="px-4 py-3 flex flex-row-reverse items-center justify-between bg-[#5cb85c] text-white">

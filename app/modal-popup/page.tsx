@@ -17,7 +17,7 @@ export default function ModalPage() {
    }
 
    return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex items-center justify-center h-screen">
          <button
             className={cn("p-4 rounded-md bg-black text-white", showModal && "hidden")}
             onClick={handleToogleModalPopup}>
