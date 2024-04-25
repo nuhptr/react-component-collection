@@ -5,7 +5,7 @@ import { ReactNode, useState } from "react"
 
 interface ITabCompProps {
    tabs: Array<any>
-   onChange: (tab: any) => void
+   onChange: (tab: number) => void
 }
 
 export function TabComp({ tabs, onChange }: ITabCompProps) {
