@@ -54,4 +54,10 @@ export const numberPage: INumberPage[] = [
       description: "Github profile finder component",
       url: "/github-profile-finder",
    },
+   {
+      id: 9,
+      name: "Dark Mode",
+      description: "Dark mode component",
+      url: "/dark-mode",
+   },
 ]
