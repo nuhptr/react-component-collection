@@ -42,4 +42,10 @@ export const numberPage: INumberPage[] = [
       description: "Modal component",
       url: "/modal-popup",
    },
+   {
+      id: 7,
+      name: "Tabs",
+      description: "Tabs component",
+      url: "/tabs",
+   },
 ]
