@@ -48,4 +48,10 @@ export const numberPage: INumberPage[] = [
       description: "Tabs component",
       url: "/tabs",
    },
+   {
+      id: 8,
+      name: "Github Profile Finder",
+      description: "Github profile finder component",
+      url: "/github-profile-finder",
+   },
 ]
