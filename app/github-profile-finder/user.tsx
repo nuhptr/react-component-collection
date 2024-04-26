@@ -26,7 +26,7 @@ export function User({ user }: IUser) {
             />
          </div>
 
-         <div className="flex flex-col items-center gap-1 mt-5 tracking-tight">
+         <div className="flex flex-col items-center mt-5 tracking-tight gap-1">
             <a
                className="text-lg font-bold text-green-500"
                href={`https://github.com/${user.login}`}>
@@ -36,15 +36,15 @@ export function User({ user }: IUser) {
          </div>
 
          <div className="flex items-start justify-center mt-5 tracking-tight gap-x-6">
-            <div className="flex justify-center gap-2 text-lg font-medium">
+            <div className="flex justify-center text-lg font-medium gap-2">
                <p>Public Repos</p>
                <p className="text-green-500">{user.public_repos}</p>
             </div>
-            <div className="flex justify-center gap-2 text-lg font-medium">
+            <div className="flex justify-center text-lg font-medium gap-2">
                <p>Followers</p>
                <p className="text-indigo-500">{user.followers}</p>
             </div>
-            <div className="flex justify-center gap-2 text-lg font-medium">
+            <div className="flex justify-center text-lg font-medium gap-2">
                <p>Following</p>
                <p className="text-fuchsia-500">{user.following}</p>
             </div>

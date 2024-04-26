@@ -31,7 +31,7 @@ export default function GithubProfileFinderPage() {
 
    return (
       <div className="container p-5 mx-auto rounded-md">
-         <div className="flex justify-center gap-5 mb-5">
+         <div className="flex justify-center mb-5 gap-5">
             <input
                className="p-3 text-base border rounded-md"
                type="text"
