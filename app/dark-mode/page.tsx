@@ -11,7 +11,7 @@ export default function DarkModePage() {
             <p className="m-0 text-3xl text-black dark:text-white">Hello World</p>
             <input
                type="checkbox"
-               className="p-4 border-none bg-none checked:bg-red-50"
+               className="w-6 h-6 cursor-pointer appearance-none border-[1px] border-green-500 rounded-md bg-white shrink-0 checked:bg-green-700 checked:border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-1 focus:ring-offset-white"
                checked={
                   theme === localStorage.getItem("theme") ? theme === "dark" : theme === "light"
                }
