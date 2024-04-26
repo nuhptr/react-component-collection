@@ -60,4 +60,52 @@ export const numberPage: INumberPage[] = [
       description: "Dark mode component",
       url: "/dark-mode",
    },
+   {
+      id: 10,
+      name: "QR Code Generator",
+      description: "QR code generator component",
+      url: "/qr-code-generate",
+   },
+   {
+      id: 11,
+      name: "Scroll Indicator",
+      description: "Scroll indicator component",
+      url: "/scroll-indicator",
+   },
+   {
+      id: 12,
+      name: "Scroll To Top and Bottom",
+      description: "Scroll to top and button component",
+      url: "/scroll-to-top-bottom",
+   },
+   {
+      id: 13,
+      name: "Tic Tac Toe",
+      description: "Tic tac toe component",
+      url: "/tic-tac-toe",
+   },
+   {
+      id: 14,
+      name: "Tree View",
+      description: "Tree view component",
+      url: "/tree-view",
+   },
+   {
+      id: 15,
+      name: "Use Fetch Api",
+      description: "Use fetch api component",
+      url: "/use-fetch-api",
+   },
+   {
+      id: 16,
+      name: "Use Outside Click",
+      description: "Use outside click component",
+      url: "/use-outside-click",
+   },
+   {
+      id: 17,
+      name: "Use Window Resize",
+      description: "Use window resize component",
+      url: "/use-window-resize",
+   },
 ]
