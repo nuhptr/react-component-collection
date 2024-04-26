@@ -17,11 +17,16 @@ export default function DarkModePage() {
                }
                onChange={() => {
                   if (theme === "light") {
-                     localStorage.setItem("theme", "dark")
+                     if (typeof window !== "undefined") {
+                        localStorage.setItem("theme", "dark")
+                     }
                      return setTheme("dark")
                   }
 
-                  localStorage.setItem("theme", "light")
+                  if (typeof window !== "undefined") {
+                     localStorage.setItem("theme", "light")
+                  }
+
                   return setTheme("light")
                }}
             />
