@@ -8,8 +8,9 @@ Building a collection of React projects to learn and experiment with different f
 
 ## Dependencies
 
--  [Styled-Components / TailwindCSS] - CSS-in-JS library.
--  [Lucide-React] - Icon library.
--  [Clsx] - Utility for conditionally joining class names together.
--  [Next-themes] - Theme provider for Next.js.
--  [Tailwind-merge] - TailwindCSS plugin for merging classes together.
+-  [lucide-react] - Icon library.
+-  [clsx] - Utility for conditionally joining class names together.
+-  [next-themes] - Theme provider for Next.js.
+-  [react-qr-code] - QR code generator.
+-  [tailwind-merge] - TailwindCSS plugin for merging classes together.
+-  [useSwr] - React hook for data fetching.
