@@ -12,21 +12,9 @@ export default function DarkModePage() {
             <input
                type="checkbox"
                className="w-6 h-6 cursor-pointer appearance-none border-[1px] border-green-500 rounded-md bg-white shrink-0 checked:bg-green-700 checked:border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-1 focus:ring-offset-white"
-               checked={
-                  theme === localStorage.getItem("theme") ? theme === "dark" : theme === "light"
-               }
+               checked={theme === "dark" ? true : false}
                onChange={() => {
-                  if (theme === "light") {
-                     if (typeof window !== "undefined") {
-                        localStorage.setItem("theme", "dark")
-                     }
-                     return setTheme("dark")
-                  }
-
-                  if (typeof window !== "undefined") {
-                     localStorage.setItem("theme", "light")
-                  }
-
+                  if (theme === "light") return setTheme("dark")
                   return setTheme("light")
                }}
             />

@@ -4,8 +4,8 @@ import { useLayoutEffect, useState } from "react"
 
 export function useWindowResize() {
    const [windowSize, setWindowSize] = useState({
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: typeof window === "undefined" ? 0 : window.innerWidth,
+      height: typeof window === "undefined" ? 0 : window.innerHeight,
    })
 
    const handleResize = () => {
